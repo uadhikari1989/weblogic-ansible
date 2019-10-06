@@ -19,5 +19,7 @@ node_manager_listen_port: '5556'
 node_manager_listen_address: 'localhost'
 admin_server_hostname: 'localhost'
 admin_server_port: '7001'
-managed_server_name: 'managed_1'
-managed_server_port: '7003'
+#managed_server_name: 'managed_1'
+#managed_server_port: '7003'
+
+managed_servers: [{name: 'n1', port: '70003'}, {name: 'n2', port: '7004'}]
