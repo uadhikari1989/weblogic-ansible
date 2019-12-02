@@ -29,6 +29,8 @@ mw_installer: 'fmw_12.2.1.2.0_infrastructure.jar'
 $ sudo ansible-playbook playbook.yml -e ansible_python_interpreter=auto -v
 ```
 
+$ sudo ansible-playbook playbook.yml -e managed_server_name="managed_1" -e managed_server_port="7007"
+
 Access Weblogic web interface at http://x.x.x.x:7001/console using `weblogic/welcome1` credentials.
 
 Playbook includes the following roles:
