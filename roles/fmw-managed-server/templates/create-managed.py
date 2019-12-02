@@ -5,14 +5,13 @@ connect('{{ weblogic_admin }}', '{{ weblogic_admin_pass }}', ADMIN_SERVER_URL);
 edit();
 startEdit();
 # applyJRF(target='{{ managed_server[0].name }}', domainDir='{{ domain_home }}');
-cd('/')
-cmo.createMachine('{{ server_hostname }}')
+#cd('/')
+#cmo.createMachine('{{ server_hostname }}')
 
-cd('/Machines/' + '{{ server_hostname }}' + '/NodeManager/' + '{{ server_hostname }}')
-cmo.setListenAddress('{{ node_manager_listen_address }}')
-cmo.setListenAddress('{{ node_manager_listen_address }}')
+#cd('/Machines/' + '{{ server_hostname }}' + '/NodeManager/' + '{{ server_hostname }}')
+#cmo.setListenAddress('{{ node_manager_listen_address }}')
+#cmo.setListenAddress('{{ node_manager_listen_address }}')
 
-{% for host in managed_server %}
   cd('/')
   cmo.createServer('{{ host.name }}')
 
@@ -26,4 +25,4 @@ cmo.setListenAddress('{{ node_manager_listen_address }}')
   save();
   activate(block='true');
   disconnect();
-{% endfor %}
+
